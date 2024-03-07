@@ -19,8 +19,9 @@ CIMURA is trained on a large protein dataset. It works best when subsetting the 
 For this reason, a csv-file containing cluster labels for each protein in needed.
 
 ### Option 1: Provide your own clustering file:
-Input:  -h5 of pLM embeddings
-        -csv of cluster labels
+Input:  
+- h5 of pLM embeddings
+- csv of cluster labels
 
 CSV-Format:
 
