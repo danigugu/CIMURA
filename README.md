@@ -45,3 +45,9 @@ CIMURA will compute clusters based on the high-dimensional h5 data and use this 
 Output:
 - CIMURA output csv file
 
+
+
+# Benchmark Data is available on zenodo
+
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10794808.svg)](https://doi.org/10.5281/zenodo.10794808)
+
