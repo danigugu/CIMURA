@@ -1,7 +1,7 @@
 ![image](https://github.com/danigugu/CIMURA/assets/159900656/90d6ee5f-0bf5-4221-b0c2-71dc3ad2dbb7)
 
 # CIMURA
-CIMURA is a Dimensionality Reduction Tool, specialized on visualizing Protein Datasets by projecting protein Langue Model embeddings.
+CIMURA is a Dimensionality Reduction Tool, specialized on visualizing Protein Datasets by projecting high-dimensional protein language model embeddings into a precomputed stable low-dimensional protein space.
 
 
 ## Getting Started
