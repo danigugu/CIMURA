@@ -25,10 +25,10 @@ Input:
 
 CSV-Format:
 
-cluster,id\n
-cluster1,prot1\n
-cluster1,prot2\n
-cluster2,prot3\n
+cluster,id<br>
+cluster1,prot1<br>
+cluster1,prot2<br>
+cluster2,prot3<br>
 
 Make sure that the ids in the csv file match the dataset names in the h5 file.
 
