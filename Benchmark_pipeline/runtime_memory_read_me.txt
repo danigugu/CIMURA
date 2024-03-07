@@ -1,0 +1,2 @@
+Select the Method, Datasets and the Output log file path. Afterwards just run the script. Runtime will be logged into a csv file, memory requirements will be printed into std_out.
+NOTICE: If CIMURA is be be analyzed, a change in the paths of the Training-files is needed.
