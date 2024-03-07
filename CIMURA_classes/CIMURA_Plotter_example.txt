@@ -1,0 +1,5 @@
+projection_csv = "path_to_cimura_output.csv"
+#Optional: path to save plot
+save_fig = None
+
+CIMURA_Plotter.plot_results(low_dim_csv=out_path, save_fig=save_fig)

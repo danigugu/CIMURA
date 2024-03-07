@@ -1,0 +1,7 @@
+cimura_t = CIMURA_Trainer(n_components=3)
+train_h5 = "path_to_training_h5_file.h5"
+trained_folder = "path_to_output_folder"
+
+model_name = "trained_model"
+
+cimura_t.full_training(model_name, train_h5, trained_folder)

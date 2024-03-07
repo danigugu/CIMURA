@@ -1,0 +1,63 @@
+#Option 1: One h5 file and a cluster csv file
+#CIMURA usually subsets the input data into mulitple clusters before mapping to the predefined protein space. These clusters can be provided in the form of a csv file of the following format.
+#
+#Example:
+#
+#cluster,id
+#clust1,prot1
+#clust1,prot2
+#clust2,prot3
+#######################################################################
+#SET YOUR PATHS
+#Datasets
+h5_path = "/content/path_2_file.h5"
+cluster_path = "/content/path_2_file.csv"
+
+#Output csv file path
+out_path = f"/content/{projection_folder}/output_name.csv"
+#######################################################################
+#SET PARAMETERS
+n_centroids = 10
+scaling_factor = 0.1
+#######################################################################
+#Define local reducer
+local_reducer = umap.UMAP(n_neighbors=25, min_dist=0.5, n_components=out_dims)
+#######################################################################
+cimura = CIMURA()
+cimura.load_training(high_dim_cimura, low_dim_cimura, centroids_cimura, centroid_ids_cimura)
+
+cimura.fit_transform_csv_multi_clusterfile(cluster_path, h5_path, out_path, n_centroids=n_centroids,
+                                           scaling_factor=scaling_factor, local_reducer=local_reducer)
+
+
+
+
+
+Option 2: One h5 file and no clustering file
+CIMURA usually subsets the input data into mulitple clusters before mapping to the predefined protein space. If no cluster annotations are available, a cluster csv file will be created by running kmeans clustering on the high-dimensional data.
+#######################################################################
+#SET YOUR PATHS
+#Datasets
+h5_path = "/content/path_2_file.h5"
+#Set numbers of clusters. If not available, try int(len(data) / 1000)
+#Example: 5000 datapoint -> n_clusters = 5
+n_clusters = 0
+cluster_path = "/content/cluster_file.csv"
+
+#Output csv file path
+out_path = f"/content/{projection_folder}/output_name.csv"
+#######################################################################
+#SET PARAMETERS
+n_centroids = 10
+scaling_factor = 0.1
+#######################################################################
+#Define local reducer
+local_reducer = umap.UMAP(n_neighbors=25, min_dist=0.5, n_components=out_dims)
+#######################################################################
+cimura = CIMURA()
+cimura.cluster_training_data(n_clusters, save_file_csv_path=cluster_path)
+
+cimura.load_training(high_dim_cimura, low_dim_cimura, centroids_cimura, centroid_ids_cimura)
+
+cimura.fit_transform_csv_multi_clusterfile(cluster_path, h5_path, out_path, n_centroids=n_centroids,
+                                           scaling_factor=scaling_factor, local_reducer=local_reducer)
