@@ -18,7 +18,7 @@ Make sure to follow the instructions.
 CIMURA is trained on a large protein dataset. It works best when subsetting the input data into neighborhoods and projecting them individually.
 For this reason, a csv-file containing cluster labels for each protein in needed.
 
-# Option 1: Provide your own clustering file:
+### Option 1: Provide your own clustering file:
 Input:  -h5 of pLM embeddings
         -csv of cluster labels
 
@@ -34,7 +34,7 @@ Make sure that the ids in the csv file match the dataset names in the h5 file.
 Output:  -CIMURA output csv file
 
 
-# Option 2: Compute cluster file using KMeans
+### Option 2: Compute cluster file using KMeans
 Input:  -h5 of pLM embeddings
 
 CIMURA will compute clusters based on the high-dimensional h5 data and use this to run the Dimensionality Reduction.
