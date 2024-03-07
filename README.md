@@ -25,20 +25,23 @@ Input:
 
 CSV-Format:
 
-cluster,id<br>
+__cluster,id__<br>
 cluster1,prot1<br>
 cluster1,prot2<br>
 cluster2,prot3<br>
 
 Make sure that the ids in the csv file match the dataset names in the h5 file.
 
-Output:  -CIMURA output csv file
+Output:
+- CIMURA output csv file
 
 
 ### Option 2: Compute cluster file using KMeans
-Input:  -h5 of pLM embeddings
+Input:
+- h5 of pLM embeddings
 
 CIMURA will compute clusters based on the high-dimensional h5 data and use this to run the Dimensionality Reduction.
 
-Output:  -CIMURA output csv file
+Output:
+- CIMURA output csv file
 
