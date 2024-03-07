@@ -1,6 +1,9 @@
 ![image](https://github.com/danigugu/CIMURA/assets/159900656/90d6ee5f-0bf5-4221-b0c2-71dc3ad2dbb7)
+
 # CIMURA
 CIMURA is a Dimensionality Reduction Tool, specialized on visualizing Protein Datasets by projecting protein Langue Model embeddings.
+
+
 ## Getting Started
 The currently easiest way to use CIMURA is the Google Colab Page. It uses precomputed matrices of reference proteins.
 These have to be loaded into Colab before running. Be aware that this part might take a while.
