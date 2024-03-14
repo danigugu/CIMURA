@@ -49,5 +49,6 @@ Output:
 
 # Benchmark Data is available on zenodo
 
-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10794808.svg)](https://doi.org/10.5281/zenodo.10794808)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10815571.svg)](https://doi.org/10.5281/zenodo.10815571)
+
 
